@@ -11,23 +11,27 @@ public class GB_UI_MyGameItem : MonoBehaviour
     public Button btn_play;
     public RectTransform rect_loading;
     string app_pkg_name;
-    public void Init(string icon_uri,string icon_save_filename, string app_name, string app_des, string app_pkg_name,bool forceWeb)
+    public void Init(string icon_name, string app_name, string app_des, string app_pkg_name)
     {
         text_appname.text = app_name;
         text_appdes.text = app_des;
         this.app_pkg_name = app_pkg_name;
+        img_icon.color = Color.white;
         StopCoroutine("Loading");
         rect_loading.gameObject.SetActive(false);
-        if (!string.IsNullOrEmpty(icon_uri))
+        if (!string.IsNullOrEmpty(icon_name))
         {
+            img_icon.color = Color.gray;
             StartCoroutine("Loading");
-            GB_Manager._instance.SetTexture(icon_uri, icon_save_filename, (t) =>
+            GB_Manager._instance.SetTexture(icon_name, (t) =>
             {
                 StopCoroutine("Loading");
+                img_icon.color = Color.white;
                 rect_loading.gameObject.SetActive(false);
                 img_icon.texture = t;
-                GB_Manager.SaveTexture(t, icon_save_filename);
-            }, forceWeb);
+                string saveFileName = icon_name.Replace("*", "");
+                GB_Manager.SaveTexture(t, saveFileName);
+            });
         }
         btn_play.onClick.RemoveAllListeners();
         if (!string.IsNullOrEmpty(app_pkg_name))

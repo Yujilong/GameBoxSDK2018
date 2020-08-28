@@ -9,6 +9,7 @@ public class GB_UI_MenuPanel : GB_UIBase
     public Button btn_cashout;
     public Button btn_help;
     public Button btn_back;
+    public Text text_coin;
     public RectTransform rect_top;
     protected override void Awake()
     {
@@ -45,6 +46,8 @@ public class GB_UI_MenuPanel : GB_UIBase
     {
         canvasGroup.alpha = 1;
         canvasGroup.blocksRaycasts = true;
+        UpdateCoinNum();
+        GB_Manager._instance.GetBaseData();
         yield return null;
     }
     public override IEnumerator OnExit()
@@ -64,5 +67,9 @@ public class GB_UI_MenuPanel : GB_UIBase
         isInGB = false;
         btn_back.gameObject.SetActive(false);
         btn_game.gameObject.SetActive(true);
+    }
+    public void UpdateCoinNum()
+    {
+        text_coin.text = GB_Manager._instance.GetCoinNum().ToString();
     }
 }

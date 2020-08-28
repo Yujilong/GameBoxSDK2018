@@ -179,6 +179,7 @@ MonoBehaviour:
   btn_cashout: {fileID: 4044115814548370476}
   btn_help: {fileID: 4044115815770995291}
   btn_back: {fileID: 6309727546681562432}
+  text_coin: {fileID: 4044115814250266382}
   rect_top: {fileID: 4044115814816792198}
 --- !u!1 &4044115814140931287
 GameObject:
@@ -1052,4 +1053,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cash Out
+  m_Text: Get Coins

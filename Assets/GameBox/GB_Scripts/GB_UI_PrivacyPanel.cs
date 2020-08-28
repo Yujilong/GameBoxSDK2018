@@ -13,6 +13,8 @@ public class GB_UI_PrivacyPanel : GB_UIBase
     }
     void OnAgreeButtonClick()
     {
+        GB_Manager._instance.OnAgreePrivacy();
         GB_UIManager.Instance.ClosePopPanelAsync(GB_PopPanelType.Privacy);
+        GB_UIManager.Instance.ShowPopPanelAsync(GB_PopPanelType.FirstReward);
     }
 }

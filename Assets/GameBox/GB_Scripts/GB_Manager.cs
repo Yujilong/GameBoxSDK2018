@@ -13,6 +13,7 @@ public class GB_Manager : MonoBehaviour
     public static bool NeedAdapterScreen = false;
     public static Vector2 NeedAdapterMoveDownOffset = new Vector2(0, 82);
     private string deviceID = string.Empty;
+    LocalData m_LocalData;
     private void Awake()
     {
         _instance = this;
@@ -23,50 +24,87 @@ public class GB_Manager : MonoBehaviour
             transform.GetChild(0),
             transform.GetChild(1),
             transform.GetChild(2));
-
+        m_LocalData = GetLocalData();
         AllAPKnames = GetAllApk();
     }
     private void Start()
     {
         GB_UIManager.Instance.ShowMenuPanel();
-        GB_UIManager.Instance.ShowPopPanelAsync(GB_PopPanelType.Privacy);
+        CheckNeedGetServerPageData();
+        if (m_LocalData.isFirst)
+        {
+            GB_UIManager.Instance.ShowPopPanelAsync(GB_PopPanelType.Privacy);
+        }
     }
-    const string MenuDataUri = "http://funtapgame.com:7070/api/game/list/device_id";
-    IEnumerator ConnectToGetMenuData(Action callback)
+    public void OnAgreePrivacy()
+    {
+        m_LocalData.isFirst = false;
+        SaveData();
+    }
+    public int GetCoinNum()
+    {
+        return m_LocalData.coin;
+    }
+    public List<GamePageData> GetAllPageGameData()
+    {
+        return m_LocalData.data;
+    }
+    const string BaseDataUri = "http://funtapgame.com:7070/api/device";
+    const string GamePageDataUri = "http://funtapgame.com:7070/api/game/list/";
+    const string TexturePrefix = "http://funtapgame.com:7070/api/image/";
+    public void GetBaseData()
+    {
+        StartCoroutine("ConnectToGetBaseData");
+    }
+    IEnumerator ConnectToGetBaseData()
     {
         List<IMultipartFormSection> iparams = new List<IMultipartFormSection>();
         iparams.Add(new MultipartFormDataSection("deviceID", deviceID));
-        UnityWebRequest www = UnityWebRequest.Get(MenuDataUri);
+        UnityWebRequest www = UnityWebRequest.Post(BaseDataUri, iparams);
+        yield return www.SendWebRequest();
+
+        while (www.isNetworkError || www.isHttpError)
+        {
+            Debug.LogError(www.error);
+            www.Dispose();
+            www = UnityWebRequest.Post(GamePageDataUri, iparams);
+            yield return www.SendWebRequest();
+        }
+        // Show results as text
+        Debug.Log(www.downloadHandler.text);
+        ReceiveRegistryData tempData = JsonMapper.ToObject<ReceiveRegistryData>(www.downloadHandler.text);
+        m_LocalData.coin = tempData.data.coin;
+        SaveData();
+        GB_UIManager.Instance.MenuPanel.UpdateCoinNum();
+    }
+    IEnumerator ConnectToGetGamePageData()
+    {
+        UnityWebRequest www = UnityWebRequest.Get(GamePageDataUri + deviceID);
         yield return www.SendWebRequest();
 
         while (www.isNetworkError || www.isHttpError )
         {
             Debug.LogError(www.error);
             www.Dispose();
-            www = UnityWebRequest.Post(MenuDataUri, iparams);
+            www = UnityWebRequest.Get(GamePageDataUri);
             yield return www.SendWebRequest();
         }
         // Show results as text
         Debug.Log(www.downloadHandler.text);
-        ReceiveData tempData = JsonMapper.ToObject<ReceiveData>(www.downloadHandler.text);
-        callback?.Invoke();
+        ReceiveGamePageData tempData = JsonMapper.ToObject<ReceiveGamePageData>(www.downloadHandler.text);
+        int count = tempData.data.Length;
+        m_LocalData.data.Clear();
+        for(int i = 0; i < count; i++)
+            m_LocalData.data.Add(tempData.data[i]);
+        SaveData();
     }
-    public void SetTexture(string uri,string iconSaveName, Action<Texture2D> callback, bool forceWeb)
+    public void SetTexture(string name, Action<Texture2D> callback)
     {
-        if(forceWeb)
-            StartCoroutine(WaitForDownloadTexture(uri, callback));
+        string localPath = Application.temporaryCachePath + "/" + name + ".jpg";
+        if (File.Exists(localPath))
+            StartCoroutine(WaitForLoadLocalTexture(localPath, callback));
         else
-        {
-            string localPath = Application.temporaryCachePath + "/" + iconSaveName + ".jpg";
-            if (File.Exists(localPath))
-                StartCoroutine(WaitForLoadLocalTexture(localPath, callback));
-            else
-                StartCoroutine(WaitForDownloadTexture(uri, callback));
-        }
-    }
-    void SetDownloadTexture(string uri, Action<Texture2D> callback)
-    {
-        StartCoroutine(WaitForDownloadTexture(uri, callback));
+            StartCoroutine(WaitForDownloadTexture(TexturePrefix + name, callback));
     }
     IEnumerator WaitForDownloadTexture(string uri, Action<Texture2D> callback)
     {
@@ -85,13 +123,22 @@ public class GB_Manager : MonoBehaviour
             yield return wr.SendWebRequest();
         }
         Texture2D t = texDl.texture;
-        callback?.Invoke(t);
+        int sideLength = Mathf.Min(t.width, t.height);
+        Texture2D cubeT = new Texture2D(sideLength, sideLength);
+        int startPosX = t.width / 2 - sideLength / 2;
+        int startPosY = t.height / 2 - sideLength / 2;
+        for (int width = 0; width < sideLength; width++)
+        {
+            for (int height = 0; height < sideLength; height++)
+            {
+                Color color = t.GetPixel(startPosX + width, startPosY + height);
+                cubeT.SetPixel(width, height, color);
+            }
+        }
+        cubeT.Apply();
+        callback?.Invoke(cubeT);
     }
-    void SetLocalTexture(string path, Action<Texture2D> callback)
-    {
-        StartCoroutine(WaitForLoadLocalTexture(path, callback));
-    }
-    public IEnumerator WaitForLoadLocalTexture(string path, Action<Texture2D> callback)
+    IEnumerator WaitForLoadLocalTexture(string path, Action<Texture2D> callback)
     {
         string filePath = "file:///" + path;
         WWW www = new WWW(filePath);
@@ -103,8 +150,47 @@ public class GB_Manager : MonoBehaviour
     }
     public static void SaveTexture(Texture2D texture, string fileName)
     {
+        fileName = fileName.Substring(0, fileName.Length - 4);
         byte[] data = texture.EncodeToJPG();
-        File.WriteAllBytes(Application.temporaryCachePath + "/" + fileName + ".jpg", data);
+        //File.WriteAllBytes(Application.temporaryCachePath + "/" + fileName + ".jpg", data);
+    }
+    void SaveData()
+    {
+        if(m_LocalData.data is object)
+        {
+            PlayerPrefs.SetString("GB_LocalData", JsonMapper.ToJson(m_LocalData));
+            PlayerPrefs.Save();
+        }
+    }
+    LocalData GetLocalData()
+    {
+        string saveStr = PlayerPrefs.GetString("GB_LocalData", string.Empty);
+        if (string.IsNullOrEmpty(saveStr))
+        {
+            return new LocalData() { coin = 0, data = new List<GamePageData>(), isFirst = true, hasReadPrivacy = false, lastGetPageDataDate = DateTime.Now.AddDays(-1) };
+        }
+        else
+            return JsonMapper.ToObject<LocalData>(saveStr);
+    }
+    void CheckNeedGetServerPageData()
+    {
+        DateTime lastGetDate = m_LocalData.lastGetPageDataDate;
+        DateTime now = DateTime.Now;
+        bool needReGet = true;
+        if (lastGetDate.Year == now.Year)
+        {
+            if (lastGetDate.Month == now.Month)
+            {
+                if (lastGetDate.Day == now.Day)
+                {
+                    needReGet = false;
+                }
+            }
+        }
+        if (needReGet)
+        {
+            StartCoroutine(ConnectToGetGamePageData());
+        }
     }
     public static List<string> AllAPKnames;
     static List<string> GetAllApk()
@@ -138,25 +224,49 @@ public class GB_Manager : MonoBehaviour
 #endif
         return apks;
     }
-}
-public struct ReceiveData
-{
-    public int code;
-    public ReceiveAppData[] data;
-    public string msg;
-}
-public struct ReceiveAppData
-{
-    public string create_time;
-    public int deleted;
-    public string game_brief;
-    public string game_detail;
-    public string game_download_url;
-    public string game_logob;
-    public string game_logos;
-    public string game_name;
-    public string game_pkg_url;
-    public int id;
-    public bool played;
-    public int type;
+    struct ReceiveRegistryData
+    {
+        public int code;
+        public BaseData data;
+        public string msg;
+    }
+    struct ReceiveGamePageData
+    {
+        public int code;
+        public GamePageData[] data;
+        public string msg;
+    }
+    public struct GamePageData
+    {
+        public string create_time;
+        public int deleted;
+        public string game_brief;
+        public string game_detail;
+        public string game_download_url;
+        public string game_logob;
+        public string game_logos;
+        public string game_name;
+        public string game_pkg_url;
+        public int id;
+        public bool played;
+        public int type;
+    }
+    struct BaseData
+    {
+        public int coin;
+        public string create_time;
+        public string device_id;
+        public int energy;
+        public int id;
+        public int interstitial;
+        public int reward;
+    }
+    struct LocalData
+    {
+        public int coin;
+        public bool isFirst;
+        public bool hasReadPrivacy;
+        public DateTime lastGetPageDataDate;
+        public List<GamePageData> data;
+    }
 }
