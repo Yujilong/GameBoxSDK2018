@@ -152,7 +152,7 @@ public class GB_Manager : MonoBehaviour
     {
         fileName = fileName.Substring(0, fileName.Length - 4);
         byte[] data = texture.EncodeToJPG();
-        //File.WriteAllBytes(Application.temporaryCachePath + "/" + fileName + ".jpg", data);
+        File.WriteAllBytes(Application.temporaryCachePath + "/" + fileName + ".jpg", data);
     }
     void SaveData()
     {
