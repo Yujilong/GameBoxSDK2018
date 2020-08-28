@@ -1,0 +1,1545 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4057869267979861044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869267979861047}
+  - component: {fileID: 4057869267979861041}
+  - component: {fileID: 4057869267979861046}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_ContentTerm(after10.3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869267979861047
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869267979861044}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869269966595906}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10100.002}
+  m_SizeDelta: {x: 792.7358, y: 10100}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &4057869267979861041
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869267979861044}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869267979861046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869267979861044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 83
+    m_Alignment: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "## 10.3.\n\nThe Provider shall otherwise be liable without limitation for
+    wilful misconduct and gross negligence. For simple negligence, the Provider shall
+    only be liable if its vicarious agents or statutory representatives breach an
+    obligation which is of key significance for the achievement of the objective of
+    the contract (a so-called key obligation). In such a situation, the liability
+    shall be limited to the foreseeable damage or loss, which is limited to the amount
+    of the fee paid by the User for the use of the App or services and functions requiring
+    registration. The above limitation of liability does not apply to claims under
+    the German Product Liability Act (Produkthaftungsgesetz) or to personal injuries.
+    However, insofar as the Provider\u2019s liability is excluded or limited, this
+    also applies to the personal liability of its statutory representatives and vicarious
+    agents.\n\n## 10.4\n\nWe shall not participate in dispute settlement proceedings
+    before a consumer arbitration board.\n\n## 11. Rules of conduct for users\n\n##
+    11.1.\n\nThe User is not permitted to load, store, disseminate, present, make
+    publicly available, publish or refer or set up links to any content with the aid
+    of the App which could infringe or impair the personal rights and/or protective
+    rights of third parties and/or:\n\nis obscene, insulting, defamatory or offensive,
+    glorifies violence or is pornographic or harasses other users or is unsuitable
+    for minors or racist, seditious, xenophobic, of an extreme right-wing nature or
+    otherwise objectionable, and/or contains or describes viruses, trojans, circumvention
+    devices as defined by the German Act for Conditional Access Services (Zugangskontrolldienstegesetz)
+    or unsolicited bulk mail (known as \u201Cspam\u201D), and/or serves the purpose
+    of and/or is suitable for extracting, storing or passing on personal data to other
+    members for purposes other than the intended use of the services, and/or invites
+    users to participate in chain letters, pyramid schemes or free share schemes and/or
+    pursues commercial or other promotional purposes.\n\n## 11.2.\n\nThe User may
+    only set up one account in the App (\u201Cprohibition of multi-accounts\u201D).
+    In particular, one account must not be used to obtain benefits for another account
+    of the same User, for example through the transfer of items or game currency credits
+    within the game from one account to another account of the same user (\u201Cprohibition
+    of pushing\u201D).\n\n## 11.3.\n\nThe use of the App is only permitted through
+    tools provided or explicitly permitted by the Provider (\u201Cprohibition of the
+    use of unauthorised scripts\u201D). This entails, in particular, that the use
+    of programmes which generate an excessive load on the server is not permitted.
+    The use of software to systematically or automatically control the App or individual
+    game functions (bots, macros) or for the reproduction or analysis of the games,
+    game elements or the content uploaded into the App is not permitted.\n\n## 12.
+    Changes to the Terms of Use and the App\n\nThe Provider reserves the right to
+    amend these Terms of Use. The Provider shall inform the User of the change by
+    e-mail at least two weeks in advance. The changes shall be deemed to have been
+    accepted by the User if he/she fails to object to those changes by e-mail to more.games.discovery@gmail.com
+    within a period of one month after the receipt of the change notification. The
+    Provider shall advise the User in the e-mail notifying him/her of the changes
+    of the significance of the four-week time limit and the legal consequences of
+    his/her failing to object. In the event that the User objects to the changes,
+    the Provider reserves the right to terminate the usage contract in accordance
+    with section 2.1 of these Terms of Use. Any legal acts carried out before the
+    change shall continue to be subject to the original Terms of Use.\n\n## 13. Data
+    protection\n\nUnless the User has explicitly agreed to more extensive processing
+    and use, the Provider shall only process and use personal data provided upon registration
+    insofar and as long as this is permitted by law, in particular to make the services
+    and functions requiring registration available. More detailed information about
+    the handling of User\u2019s personal data can be found in the privacy notice and,
+    if appropriate, in a declaration of consent to be confirmed prior to active use
+    of the App.\n\n## 14. Final provisions\n\n## 14.1 Server time\n\nIf a date and/or
+    time are applicable for declarations and legal transactions, the displayed server
+    date and the displayed server time of the App shall be decisive.\n\n## 14.2 Applicable
+    law and place of jurisdiction\n\nSubstantive German law applies to the exclusion
+    of choice of law rules. This also applies if the User accesses the App from outside
+    Germany.\n\nThe place of jurisdiction for any claims related to an order is Hamburg,
+    insofar as the User does not have either his/her place of residence or habitual
+    residence in Germany but the registration in the App can be ascribed to the User\u2019s
+    commercial and/or independent professional activities. The Provider has the right
+    to also bring lawsuits in the User\u2019s general place of jurisdiction. Mandatory
+    provisions of the EC Convention on Jurisdiction and the Enforcement of Judgments
+    shall have precedence.\n\n## 14.3. Sub-service providers, takeover of the contract\n\nThe
+    Provider has the right to either entirely or partially entrust third parties with
+    the provision of the agreed services at any time. Furthermore, the Provider can
+    transfer its rights and obligations under this contract to one or more third parties
+    (takeover of the contract). In the event of a complete takeover of the contract,
+    the User shall have the right to terminate the contract without notice.\n\n##
+    14.4. Text form\n\nAny arrangements that deviate from these Terms of Use must
+    be in text form in order to be effective. This also applies to any annulment of
+    the requirement of written form.\n\n## 14.5. Severability clause\n\nShould a provision
+    of these Terms of Use be or become ineffective, the effectiveness of the other
+    provisions hereof shall not be affected. The ineffective or unenforceable provision
+    shall be replaced by the parties by an effective provision which comes as close
+    as possible to the commercial purpose of the ineffective or unenforceable provision.
+    The same shall apply in the event of unintended gaps or omissions.\n\nAs of: January
+    2020"
+--- !u!1 &4057869268237535563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869268237535562}
+  - component: {fileID: 4057869268237535604}
+  - component: {fileID: 4057869268237535605}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_ContentBarHandle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869268237535562
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268237535563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869269852113696}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869268237535604
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268237535563}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869268237535605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268237535563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!1 &4057869268311898532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869268311898535}
+  - component: {fileID: 4057869268311898529}
+  - component: {fileID: 4057869268311898534}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_ContentPrivacy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869268311898535
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268311898532}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869269966595906}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 14421.764}
+  m_SizeDelta: {x: 792.7358, y: 7405.4746}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &4057869268311898529
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268311898532}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869268311898534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268311898532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 83
+    m_Alignment: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Privacy\n\nThis App built the game as an Ad Supported app. This SERVICE
+    is provided by This App at no cost and is intended for use as is.\n\nThis page
+    is used to inform visitors regarding our policies with the collection, use, and
+    disclosure of Personal Information if anyone decided to use our Service.\n\nIf
+    you choose to use our Service, then you agree to the collection and use of information
+    in relation to this policy. The Personal Information that we collect is used for
+    providing and improving the Service. we will not use or share your information
+    with anyone except as described in this Privacy Policy.\n\nInformation Collection
+    and Use\n\nFor a better experience, while using our Service, we may require you
+    to provide us with certain personally identifiable information, including but
+    not limited to Advertising ID. The information that we request will be retained
+    by us and used as described in this privacy policy.\n\nThe app does use third
+    party services that may collect information used to identify you.\n\nLink to privacy
+    policy of third party service providers used by the app\n\nGoogle Play Services\n\nLog
+    Data\n\nwe want to inform you that whenever you use our Service, in a case of
+    an error in the app we collect data and information (through third party products)
+    on your phone called Log Data. This Log Data may include information such as your
+    device Internet Protocol (\u201CIP\u201D) address, device name, operating system
+    version, the configuration of the app when utilizing our Service, the time and
+    date of your use of the Service, and other statistics.\n\nCookies\n\nCookies are
+    files with a small amount of data that are commonly used as anonymous unique identifiers.
+    These are sent to your browser from the websites that you visit and are stored
+    on your device\u2019s internal memory.\n\nThis Service does not use these \u201Ccookies\u201D
+    explicitly. However, the app may use third party code and libraries that use \u201Ccookies\u201D
+    to collect information and improve their services. You have the option to either
+    accept or refuse these cookies and know when a cookie is being sent to your device.
+    If you choose to refuse our cookies, you may not be able to use some portions
+    of this Service.\n\nService Providers\n\nwe may employ third-party companies and
+    individuals due to the following reasons:\n\nTo facilitate our Service;To provide
+    the Service on our behalf;To perform Service-related services; or To assist us
+    in analyzing how our Service is used.\n\nwe want to inform users of this Service
+    that these third parties have access to your Personal Information. The reason
+    is to perform the tasks assigned to them on our behalf. However, they are obligated
+    not to disclose or use the information for any other purpose.\n\nSecurity\n\nwe
+    value your trust in providing us your Personal Information, thus we are striving
+    to use commercially acceptable means of protecting it. But remember that no method
+    of transmission over the internet, or method of electronic storage is 100% secure
+    and reliable, and we cannot guarantee its absolute security.\n\nLinks to Other
+    Sites\n\nThis Service may contain links to other sites. If you click on a third-party
+    link, you will be directed to that site. Note that these external sites are not
+    operated by us. Therefore, we strongly advise you to review the Privacy Policy
+    of these websites. we have no control over and assume no responsibility for the
+    content, privacy policies, or practices of any third-party sites or services.\n\nChildren\u2019s
+    Privacy\n\nThese Services do not address anyone under the age of 13. we do not
+    knowingly collect personally identifiable information from children under 13.
+    In the case we discover that a child under 13 has provided us with personal information,
+    we immediately delete this from our servers. If you are a parent or guardian and
+    you are aware that your child has provided us with personal information, please
+    contact us so that we will be able to do necessary actions.\n\nChanges to This
+    Privacy Policy\n\nwe may update our Privacy Policy from time to time. Thus, you
+    are advised to review this page periodically for any changes. we will notify you
+    of any changes by posting the new Privacy Policy on this page. These changes are
+    effective immediately after they are posted on this page.\n\nContact Us\n\nIf
+    you have any questions or suggestions about our Privacy Policy, do not hesitate
+    to contact us."
+--- !u!1 &4057869268508969382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869268508969377}
+  - component: {fileID: 4057869268508969378}
+  - component: {fileID: 4057869268508969379}
+  - component: {fileID: 4057869268508969376}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_ContentBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869268508969377
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268508969382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4057869269852113696}
+  m_Father: {fileID: 4057869269057478403}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 396.18, y: -0.18167}
+  m_SizeDelta: {x: 49.305298, y: 862.874}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869268508969378
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268508969382}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869268508969379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268508969382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &4057869268508969376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268508969382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2061169968, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 4057869268237535605}
+  m_HandleRect: {fileID: 4057869268237535562}
+  m_Direction: 2
+  m_Value: 0.99999994
+  m_Size: 0.019757666
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4057869268570423875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869268570423874}
+  - component: {fileID: 4057869268570423884}
+  - component: {fileID: 4057869268570423885}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_Base
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869268570423874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268570423875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4057869269661003465}
+  - {fileID: 4057869269057478403}
+  - {fileID: 4057869268709058933}
+  m_Father: {fileID: 4057869269433231944}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.17004395, y: -95.19006}
+  m_SizeDelta: {x: 906.2677, y: 1231.6063}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869268570423884
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268570423875}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869268570423885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268570423875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!1 &4057869268709058890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869268709058933}
+  - component: {fileID: 4057869268709058934}
+  - component: {fileID: 4057869268709058935}
+  - component: {fileID: 4057869268709058932}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_Agree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869268709058933
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268709058890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4057869269611267905}
+  - {fileID: 3595413192833868981}
+  m_Father: {fileID: 4057869268570423874}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -470}
+  m_SizeDelta: {x: 336, y: 103}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869268709058934
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268709058890}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869268709058935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268709058890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 10b3c9f0f1c3f614db1050bcb579b3b4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &4057869268709058932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869268709058890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 4057869268709058935}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4057869269057478400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269057478403}
+  - component: {fileID: 4057869269057478412}
+  - component: {fileID: 4057869269057478413}
+  - component: {fileID: 4057869269057478402}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_ContentMask
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269057478403
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269057478400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4057869269966595906}
+  - {fileID: 4057869268508969377}
+  m_Father: {fileID: 4057869268570423874}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 17.4, y: 39.2}
+  m_SizeDelta: {x: 855.9598, y: 862.5107}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869269057478412
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269057478400}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869269057478413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269057478400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -146154839, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4057869269057478402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269057478400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.9294118, g: 0.9294118, b: 0.9294118, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!1 &4057869269425629374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269425629369}
+  - component: {fileID: 4057869269425629371}
+  - component: {fileID: 4057869269425629368}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269425629369
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269425629374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869269433231944}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869269425629371
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269425629374}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869269425629368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269425629374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.29803923}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!1 &4057869269433231945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269433231944}
+  - component: {fileID: 2294944249520361218}
+  - component: {fileID: 358980785713816874}
+  m_Layer: 5
+  m_Name: GB_UI_PrivacyPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269433231944
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269433231945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4057869269425629369}
+  - {fileID: 4057869268570423874}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &2294944249520361218
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269433231945}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &358980785713816874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269433231945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6b689754f7f3845ad963a7672deee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn_agree: {fileID: 4057869268709058932}
+--- !u!1 &4057869269611267910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269611267905}
+  - component: {fileID: 4057869269611267907}
+  - component: {fileID: 4057869269611267904}
+  m_Layer: 5
+  m_Name: GB_HelpPanel_AgreeText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269611267905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269611267910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869268709058933}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 336, y: 104}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869269611267907
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269611267910}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869269611267904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269611267910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 51
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 56
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: I Agree
+--- !u!1 &4057869269661003470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269661003465}
+  - component: {fileID: 4057869269661003467}
+  - component: {fileID: 4057869269661003464}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269661003465
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269661003470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869268570423874}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888, y: 533}
+  m_SizeDelta: {x: 906.26776, y: 106.467834}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4057869269661003467
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269661003470}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869269661003464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269661003470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 71
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 83
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Terms & Privacy
+--- !u!1 &4057869269852113697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269852113696}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_ContentBarSlidingArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269852113696
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269852113697}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4057869268237535562}
+  m_Father: {fileID: 4057869268508969377}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4057869269930627469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269930627468}
+  - component: {fileID: 4057869269930627470}
+  - component: {fileID: 4057869269930627471}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_ContentTerm(before10.3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269930627468
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269930627469}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869269966595906}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10100.004}
+  m_SizeDelta: {x: 792.7358, y: 26149}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &4057869269930627470
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269930627469}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869269930627471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269930627469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 83
+    m_Alignment: 0
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Terms\n\n# Terms of Use\n\nThese Terms of Use apply to any person (hereinafter
+    referred to as the \u201CUser\u201D) who installs the This app (hereinafter referred
+    to as the \u201CApp\u201D).\n\nThe This app is provided and operated by This App
+    (hereinafter referred to as the \u201CProvider\u201D). You can find more detailed
+    information on the Provider in the App\u2019s imprint.\n\n## 1. Registration,
+    requirements for use, password\n\n## 1.1.\n\nThe App may be used free of charge
+    following registration. You register by entering your e-mail address or through
+    the single sign-on of Facebook or Google Plus, in the App\u2019s dialogue window
+    or menu item provided for this purpose. You may register if:\n(a) you are over
+    18 years of age and therefore have full legal capacity;\n(b) you fully and accurately
+    fill in the required information requested upon registration; and\n(c) you do
+    not yet have a user account for the App.\n\n## 1.2.\n\nBy completing and sending
+    the registration form, the user applies for a user account for the App to be set
+    up for him/her. When the Provider subsequently confirms or carries out the registration,
+    a user relationship will be established, which authorises the user to use all
+    of the App\u2019s services and functions.\n\n## 1.3.\n\nThe use of and registration
+    in the App is only permitted for private purposes. There is no entitlement to
+    registration or to the use of relevant services and functions of the App. The
+    User must provide complete and correct information. Only one user account may
+    be set up per user. Transferring or selling a user account to third parties for
+    their own purposes is not permitted. E-mail addresses or self-selected user names
+    must not have the potential to violate interests or rights of other users meriting
+    protection or to breach laws.\n\n## 1.4.\n\nUpon registration, the password selected
+    by the user will be assigned to his/her user account. The User must not disclose
+    the password or make it available to third parties and must keep it in a safe
+    place so as to avoid misuse. He/she must immediately inform the Provider if he/she
+    has lost his/her password or if he/she learns that unauthorised third parties
+    have gained knowledge of it. The User is liable for any misuse by third parties,
+    unless he/she provides proof that it is not his/her fault..\n\n## 2. Term, termination
+    and cancellation right\n\n## 2.1.\n\nRegistration in the App and the resulting
+    possibility of making full use of the App is effective until termination, which
+    can be declared by either the User or the Provider, giving one month\u2019s notice.\n\n##
+    2.2.\n\nThe parties\u2019 right of extraordinary termination for good cause remains
+    unaffected. Good cause exists for the Provider, in particular, if: (i) the User
+    uses the App in breach of contract, particularly for commercial or improper purposes,
+    or in breach of the rules of conduct set out in section 11 of these Terms of Use;
+    (ii) the application for registration was incorrect or fraudulent.\n\n## 2.3.\n\nAny
+    notice of termination must be in text form. The User can direct a notice of termination
+    to the address of the Provider specified in the imprint. The Provider can direct
+    a notice of termination to the e-mail address last specified by the User in the
+    user account.\n\n## 2.4.\n\nAfter the end of the notice period for termination
+    or when the user relationship between the user and the Provider otherwise ends,
+    the right of the User to make further use of the services and functions of the
+    App requiring registration shall expire. As a rule, after the end of the user
+    relationship it will no longer be possible for the User to access data and content
+    which were associated with the user account.\n\nCoins which the User has earned
+    before the effective date of the termination may be redeemed up to six months
+    after that date against a cash reward or other reward made available by the Provider
+    in accordance with the provisions of section 5 of these Terms of Use. Thereafter,
+    the coins shall expire and it will no longer be possible to redeem them. Upon
+    the effectiveness of the termination by one of the parties, the user\u2019s right
+    to collect coins in order to redeem them against rewards shall expire.\n\n## 2.5.\n\nThe
+    User\u2019s statutory right to cancel the usage relationship established through
+    the registration within two weeks from the activation of the user account by notice
+    to the Provider remains unaffected.\n\n## 2.6.\n\nFollowing the termination or
+    cancellation, the User shall be free to continue to use the preset Apps of the
+    Provider\u2019s partner companies obtained by him/her.\n\n## 3. General specification\n\nThe
+    App is an offer to present apps in all categories. It also enables the User to
+    participate in a reward or bonus programme for the active use of game apps and
+    other apps. Participation in the App solely serves the purpose of entertainment.
+    The service provided by the App is to present to the User, possibly on the basis
+    of his/her previous app preferences as well as his/her use and purchase behaviour
+    with regard to such apps, games and other apps for the use of which the User can
+    obtain coins via the App. The User earns coins through the active use of the apps
+    of the Provider\u2019s partner companies preset in the App (hereinafter referred
+    to as \u201Cpreset apps\u201D), as well as through the purchase of services and
+    virtual items in the preset apps (in-app purchases).\n\nYou will find simple instructions
+    for the use of the App when you first open it.\n\n## 4. Collecting coins\n\n##
+    4.1.\n\nThe App offers users the possibility of collecting coins for the use of
+    the preset apps.\n\nThe preset apps for which coins can be collected; the number
+    of coins which can be earned per app; and the time and content limitation of special
+    offers or special campaigns relating to individual coins and rewards are established
+    solely by the Provider and can be changed by the Provider at any time without
+    giving reasons. The User has no legal entitlement in this respect.\n\n## 4.2.\n\nCoins
+    expire automatically one year after they have been credited to the User\u2019s
+    App account, unless they have been previously redeemed against rewards.\n\n##
+    5. Redeem coins and receive rewards\n\n## 5.1.\n\nUsers can redeem their coins
+    for particular rewards according to an exchange rate established by the Provider
+    for each reward. Examples of such rewards are PayPal credits, cash rewards or
+    virtual rewards for other apps, credit codes or other digital content. The User
+    can choose the rewards in the reward shop of the App. The User can select any
+    reward provided by the Provider for which he/she has collected a sufficient number
+    of coins, unless stocks of the selected reward are exhausted.\n\n## 5.2.\n\nThe
+    Provider shall transfer cash rewards into a regular bank or online account of
+    the User (for example via PayPal). For this purpose, the User must specify his/her
+    payment details in connection with the payment of the rewards (bank details, e-mail
+    address and user name for his/her online account, if necessary). The Provider
+    will store that information for future transactions.\n\n## 5.3.\n\nVirtual rewards
+    may, for example, be in-app items which are gifted to the users in other apps.
+    The virtual rewards may be granted to the User through various channels, including
+    but not limited to e-mail, push notification, text message or only a click on
+    a button.\n\n## 5.4.\n\nRewards for the coins may also be voucher codes which
+    the users can redeem in other apps or shops. When redeeming the coins against
+    a voucher, the Provider\u2019s performance is limited to the transfer of a credit
+    code to the User by the Provider conferring on the User an entitlement to conclude
+    a contract with the respective issuer of the voucher or the party which is specified
+    as the provider of the service for the respective voucher, on the terms specified
+    on the respective voucher. The Provider provides no warranty for the voucher partner\u2019s
+    financial capacity or creditworthiness and does not owe the performances specified
+    on the voucher. The voucher partner is solely responsible for the performance
+    of that contract, including the handling of any warranty claims.\n\n## 5.5.\n\nFor
+    the redemption of rewards, the exchange rate at the moment of redemption always
+    applies. The Provider reserves the right to change and adjust the exchange rate
+    on an ongoing basis. The user has no entitlement to the maintenance or granting
+    of a particular exchange rate.\n\n## 5.6.\n\nThe Provider will continue to develop
+    the App on an ongoing basis. The User has no entitlement to the maintenance of
+    the App or the preset apps in the version existing upon the conclusion of the
+    contract. The Provider therefore reserves the right to offer new features and
+    functions at any time, particularly (but not exclusively) for the redemption of
+    coins. In the course of the modification and further development of the App, the
+    Provider also reserves the right to tie individual features to certain conditions
+    (e.g. the achievement of a particular coin account balance or the performance
+    of certain actions, for example further app installations) or to no longer offer
+    them at all.\n\n## 5.7.\n\nThe Provider guarantees no profits to the User. In
+    particular, the User shall not be entitled to be paid a particular reward. An
+    entitlement to the payment of a reward only exists if such an entitlement has
+    been explicitly offered by the Provider. The applicable exchange rate is that
+    of the time of the redemption of the coins.\n\nThe User shall not be entitled
+    to the payment or redemption of the reward if he/she violates the game rules or
+    rules of conduct set out in section 11, particularly if he/she has technically
+    manipulated the outcome of a game or the App itself.\n\n## 6. Fees\n\nThe use
+    and registration of the App is free of charge. The Provider reserves the right
+    to charge fees in the future for individual features. This may occur in particular,
+    though not exclusively, for the activation of additional features within the App
+    or the purchase of coins for further use in the App.\n\nThe User will be informed
+    of this at least two weeks in advance. If he/she does not agree to the additional
+    costs, the Provider shall have the right to terminate this usage contract, giving
+    one month\u2019s notice, effective at the end of a month, in which case the User
+    shall have the right to redeem the coins which he/she has already earned until
+    the effective date of the termination within a further six months from the effective
+    date of the termination.\n\n## 7. User\u2019s usage rights to content\n\n## 7.1.\n\nIf
+    the User places texts, photographs or other content (hereinafter referred to jointly
+    as \u201Ccontent\u201D) in the App or disseminates such content in the App (for
+    example within the framework of his/her profile or through comment functions),
+    he/she shall grant the Provider, free of charge, the right to store that content
+    without any time limitation, to make it available free of charge for accessing
+    in connection with the respective offer, to edit it, offer it for storage or printing
+    or to use it in online, print, radio or other media. The content will only be
+    published on the App. Any use for advertising purposes (e.g. advertisements) shall
+    require the consent of the respective user. The rights can be granted to third
+    parties by way of a sublicense, provided that such sublicensing serves the purpose
+    of enabling the third party to provide services for the App in connection with
+    the provision or use of the App. The above-mentioned rights shall remain with
+    the Provider without any time limitation also after the usage contract has been
+    terminated or otherwise ended.\n\n## 7.2.\n\nThe User warrants by uploading the
+    content that he/she is able to dispose of the rights hereby granted, that no opposing
+    third-party rights exist and that he/she has not yet otherwise disposed of the
+    rights to the content which would preclude their being granted to the Provider
+    in accordance with these Terms of Use. Persons under 18 years of age warrant that
+    they have obtained the consent of their parents or guardians.\n\n## 7.3.\n\nThe
+    Provider is not obliged to verify the correctness, completeness or legality of
+    the User\u2019s content in advance. The Provider does not adopt the User\u2019s
+    content as its own. The Provider shall not be liable for any damage or loss caused
+    by the use of that content. If the Provider is informed of legal violations due
+    to third-party or linked content, it shall delete or block the relevant content
+    after examining the allegation of unlawfulness.\n\n## 7.4\n\nThe User shall indemnify
+    the Provider against any justified third-party claims which are asserted against
+    the Provider or companies affiliated with it, as defined by Article 15 et seq.
+    of the German Stock Corporation Act (Aktiengesetz), or their statutory representatives
+    and/or vicarious agents due to the use of the rights granted under section 7 or
+    due to content distributed and made publicly available by the User on the App.
+    The User shall fully reimburse the Provider for the judicial and extra-judicial
+    costs incurred as a result of this by the Provider or its statutory representatives
+    and/or vicarious agents.\n\n## 8. Rights to the content provided by the Provider\n\nThe
+    content provided by the Provider on the App is protected under copyright and ancillary
+    copyright law. Duplication, public reproduction or other use or utilisation of
+    content which is thus protected requires the consent of the respective rights
+    holder. The User is permitted to use, access, save and print out the content exclusively
+    for the purposes of the contractual use of the App and for private use and provided
+    that this is neither directly nor indirectly for commercial purposes.\n\n## 9.
+    Availability, data backup\n\n## 9.1.\n\nThe Provider provides no guarantee that
+    the App and the services and functions requiring registration operate and are
+    available without interruption and errors at all times. The User must him/herself
+    ensure an adequate Internet connection. The User is aware that, like any other
+    software, the games and services can never be completely free of errors. The User
+    is responsible him/herself for the fulfilment of the system requirements necessary
+    for the use of the App, particularly with respect to the operating system used
+    by it. However, the Provider shall make every effort, within the limits of what
+    is commercially reasonable, to enable the operation of the App without interruptions
+    or errors at all times.\n\n## 9.2.\n\nThe Provider can restrict the availability
+    of and access to the App and services and functions requiring registration insofar
+    as the security of the network operation and the maintenance of the network integrity,
+    particularly the need to avoid serious disruptions of the network, the software
+    or stored data, requires this.\n\n## 9.3\n\nThe Provider is not obliged to provide
+    updates or upgrades for the App or to otherwise modify the App in line with possible
+    changes made to hardware and/or software (particularly operating systems).\n\n##
+    10 Warranty / liability\n\n## 10.1.\n\nIf the Provider learns that the App has
+    errors which significantly impair its fitness for the contractual use, it shall
+    endeavour to eliminate the errors as soon as possible, for example by providing
+    an update. This does not include errors which do not lie within the Provider\u2019s
+    area of responsibility, such as errors which occur due to updates in the android
+    operating system.\n\n## 10.2.\n\nThe use of the preset apps shall be regulated
+    exclusively by the usage relationship existing between the User and the Provider\u2019s
+    partner company and any terms of use set by the partner company. It is explicitly
+    left to the User to inform him/herself about the key issues governing his/her
+    decision to conclude a contract or to agree to the partner company\u2019s Terms
+    of Use.\n\nThe Provider shall not be the User\u2019s contract partner with regard
+    to the use of the preset apps. The Provider shall not bear any liability for material
+    or legal defects in this respect. The Provider shall also not be liable for the
+    correctness, completeness and/or up-to-dateness of the content of the preset apps.
+    The Provider does not adopt the content of those apps as its own and is not liable
+    for any damage or loss caused by the use of those apps. The Provider also provides
+    no guarantee for the partner company\u2019s services being performed correctly.\n"
+--- !u!1 &4057869269966595907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4057869269966595906}
+  - component: {fileID: 4057869269966595919}
+  - component: {fileID: 4057869269966595916}
+  - component: {fileID: 4057869269966595917}
+  m_Layer: 5
+  m_Name: GB_PrivacyPanel_Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4057869269966595906
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269966595907}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4057869268311898535}
+  - {fileID: 4057869269930627468}
+  - {fileID: 4057869267979861047}
+  m_Father: {fileID: 4057869269057478403}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -18, y: 862.5116}
+  m_SizeDelta: {x: 792.73584, y: 43654.48}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &4057869269966595919
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269966595907}
+  m_CullTransparentMesh: 0
+--- !u!114 &4057869269966595916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269966595907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &4057869269966595917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4057869269966595907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 4057869269966595906}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 4057869269057478403}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 4057869268508969376}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &4788089281122650909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3595413192833868981}
+  - component: {fileID: 3789349239000739746}
+  - component: {fileID: 4773684822395135475}
+  m_Layer: 5
+  m_Name: GB_HelpPanel_DisAgreeText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3595413192833868981
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788089281122650909}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4057869268709058933}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -81.7}
+  m_SizeDelta: {x: 898.34656, y: 41.68689}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3789349239000739746
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788089281122650909}
+  m_CullTransparentMesh: 0
+--- !u!114 &4773684822395135475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788089281122650909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 32
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 56
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: If you don not agree, please quit this app.

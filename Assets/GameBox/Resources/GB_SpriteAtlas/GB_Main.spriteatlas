@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GB_Main
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 512d067db8abb294987ab0dc989be3f8, type: 3}
+    totalSpriteSurfaceArea: 376534
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 10b3c9f0f1c3f614db1050bcb579b3b4, type: 3}
+  - {fileID: 21300000, guid: e5e6269197d34e94392ba4cfd1a08c3a, type: 3}
+  - {fileID: 21300000, guid: 57cf3a62cae50a34e9b6a019a7bedf88, type: 3}
+  - {fileID: 21300000, guid: 59bf8f23adaa23241bd98a459a1655fd, type: 3}
+  - {fileID: 21300000, guid: d00da9243d1bacb478ffb706a21a8eff, type: 3}
+  - {fileID: 21300000, guid: e62c6e9551501a04396f1b2d520c9e1b, type: 3}
+  - {fileID: 21300000, guid: c5be85960bcd0364d8c31dd4a93adfe6, type: 3}
+  - {fileID: 21300000, guid: f44c6ed6f422b4241adf334963937a1e, type: 3}
+  - {fileID: 21300000, guid: a0c1e067b8fa3aa44bbc56a1c139f45d, type: 3}
+  - {fileID: 21300000, guid: f7555a3908f45ff4bb76e7b37cd15e5e, type: 3}
+  - {fileID: 21300000, guid: 5e3d6d99d1071ff4bb6fd40ac87a1c13, type: 3}
+  - {fileID: 21300000, guid: 17e61fee09716bc45b04266cdc2c84e2, type: 3}
+  - {fileID: 21300000, guid: f24765ff7245596429a6d72522bfc5c9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - GB_Sprite_Main_Button
+  - GB_Sprite_Wait
+  - GB_Sprite_Main_Paypal
+  - GB_Sprite_Main_NumBG
+  - GB_Sprite_Main_Reward
+  - GB_Sprite_Main_Top
+  - GB_Sprite_Main_Wallet
+  - GB_Sprite_Main_Game
+  - GB_Sprite_Main_Play
+  - GB_Sprite_Main_Back
+  - GB_Sprite_Main_Coin
+  - GB_Sprite_Main_Amazon
+  - GB_Sprite_Main_Help
+  m_Tag: GB_Main
+  m_IsVariant: 0
