@@ -556,7 +556,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You Got a welcome bonus of <color=#FF6600>5000</color> Coins equal to \n\n<size=90><color=#FF6600>5
+  m_Text: "You Got a welcome bonus of <color=#FF6600>500</color> Coins equal to \n\n<size=90><color=#FF6600>0.5
     Dollars!!</color></size>"
 --- !u!1 &4993563772067322080
 GameObject:
