@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class GB_UI_GamePagePanel : GB_UIBase
@@ -19,6 +20,9 @@ public class GB_UI_GamePagePanel : GB_UIBase
     public Text text_notice2;
     RectTransform rect_notice1;
     RectTransform rect_notice2;
+
+   Texture2D texture_default;
+
     readonly List<GB_UI_MyGameItem> list_allMyGames = new List<GB_UI_MyGameItem>();
     readonly List<GB_UI_NewGameItem> list_allNewGames = new List<GB_UI_NewGameItem>();
     readonly string[] str_tips = new string[]
@@ -108,6 +112,7 @@ public class GB_UI_GamePagePanel : GB_UIBase
     {
         base.Awake();
         btn_loadmore.onClick.AddListener(LoadNextPage);
+        texture_default = Resources.Load<Texture2D>("GB_Default/GB_Sprite_Main_DefaultIcon");
 
         if (GB_Manager.NeedAdapterScreen)
         {
@@ -196,7 +201,7 @@ public class GB_UI_GamePagePanel : GB_UIBase
                 willResetNotice2 = true;
         }
     }
-    const int loadCountPerPage = 8;
+    const int loadCountPerPage = 3;
     int dataStartIndex = 0;
     int myGameIndex = 0;
     int newGameIndex = 0;
@@ -218,7 +223,7 @@ public class GB_UI_GamePagePanel : GB_UIBase
                 if (list_allMyGames.Count < myGameIndex + 1)
                     list_allMyGames.Add(Instantiate(go_singleMyGame, instantiateParent).GetComponent<GB_UI_MyGameItem>());
                 list_allMyGames[myGameIndex].gameObject.SetActive(true);
-                list_allMyGames[myGameIndex].Init(tempData.game_logos, tempData.game_name, tempData.game_brief, tempData.game_pkg_url);
+                list_allMyGames[myGameIndex].Init(texture_default, tempData.game_logos, tempData.game_name, tempData.game_brief, tempData.game_pkg_url);
                 myGameIndex++;
             }
             else
@@ -227,7 +232,7 @@ public class GB_UI_GamePagePanel : GB_UIBase
                     list_allNewGames.Add(Instantiate(go_singleNewGame, instantiateParent).GetComponent<GB_UI_NewGameItem>());
                 string[] adStrs = tempData.game_logob.Split(',');
                 list_allNewGames[newGameIndex].gameObject.SetActive(true);
-                list_allNewGames[newGameIndex].Init(adStrs[0], adStrs[1], tempData.game_name, tempData.game_brief, tempData.game_detail, "", tempData.game_pkg_url);
+                list_allNewGames[newGameIndex].Init(texture_default, adStrs[0], adStrs[1], tempData.game_name, tempData.game_brief, tempData.game_detail, "", tempData.game_pkg_url);
                 newGameIndex++;
             }
         }
@@ -257,7 +262,7 @@ public class GB_UI_GamePagePanel : GB_UIBase
                 if (list_allMyGames.Count < myGameIndex + 1)
                     list_allMyGames.Add(Instantiate(go_singleMyGame, instantiateParent).GetComponent<GB_UI_MyGameItem>());
                 list_allMyGames[myGameIndex].gameObject.SetActive(true);
-                list_allMyGames[myGameIndex].Init(tempData.game_logos, tempData.game_name, tempData.game_brief, tempData.game_pkg_url);
+                list_allMyGames[myGameIndex].Init(texture_default, tempData.game_logos, tempData.game_name, tempData.game_brief, tempData.game_pkg_url);
                 myGameIndex++;
             }
             else
@@ -266,7 +271,7 @@ public class GB_UI_GamePagePanel : GB_UIBase
                     list_allNewGames.Add(Instantiate(go_singleNewGame, instantiateParent).GetComponent<GB_UI_NewGameItem>());
                 string[] adStrs = tempData.game_logob.Split(',');
                 list_allNewGames[newGameIndex].gameObject.SetActive(true);
-                list_allNewGames[newGameIndex].Init(adStrs[0], adStrs[1], tempData.game_name, tempData.game_brief, tempData.game_detail, "", tempData.game_pkg_url);
+                list_allNewGames[newGameIndex].Init(texture_default, adStrs[0], adStrs[1], tempData.game_name, tempData.game_brief, tempData.game_detail, "", tempData.game_pkg_url);
                 newGameIndex++;
             }
         }

@@ -113,7 +113,8 @@ public class GB_Manager : MonoBehaviour
             File.Delete(path);
         }
         GB_UI_GamePagePanel _GamePagePanel = GB_UIManager.Instance.Get_UIPanel(GB_FullScreenPanelType.GamePage) as GB_UI_GamePagePanel;
-        _GamePagePanel.RefreshPage();
+        if (_GamePagePanel)
+            _GamePagePanel.RefreshPage();
     }
     readonly List<Coroutine> COR_allSetTexture = new List<Coroutine>();
     public void SetTexture(string name, Action<Texture2D,bool> callback)

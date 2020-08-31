@@ -11,22 +11,20 @@ public class GB_UI_MyGameItem : MonoBehaviour
     public Button btn_play;
     public RectTransform rect_loading;
     string app_pkg_name;
-    public void Init(string icon_name, string app_name, string app_des, string app_pkg_name)
+    public void Init(Texture2D defaultIcon, string icon_name, string app_name, string app_des, string app_pkg_name)
     {
         text_appname.text = app_name;
         text_appdes.text = app_des;
         this.app_pkg_name = app_pkg_name;
-        img_icon.color = Color.white;
+        img_icon.texture = defaultIcon;
         StopCoroutine("Loading");
         rect_loading.gameObject.SetActive(false);
         if (!string.IsNullOrEmpty(icon_name))
         {
-            img_icon.color = Color.gray;
             StartCoroutine("Loading");
             GB_Manager._instance.SetTexture(icon_name, (t,isNew) =>
             {
                 StopCoroutine("Loading");
-                img_icon.color = Color.white;
                 rect_loading.gameObject.SetActive(false);
                 img_icon.texture = t;
                 string saveFileName = icon_name.GetHashCode().ToString();

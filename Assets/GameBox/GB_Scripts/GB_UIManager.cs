@@ -299,7 +299,7 @@ public class GB_UIManager : MonoBehaviour
     }
     public SpriteAtlas GetSpriteAtlas(GB_FullScreenPanelType fullScreenPanelType)
     {
-        return GetSpriteAtlas((int)fullScreenPanelType);
+        return GetSpriteAtlas((int)GB_FullScreenPanelType.Shop);
     }
     public GB_UIBase Get_UIPanel(int index)
     {
