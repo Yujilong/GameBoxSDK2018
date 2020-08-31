@@ -11,7 +11,8 @@ public class GB_Manager : MonoBehaviour
     public static GB_Manager _instance;
     [NonSerialized]
     public static bool NeedAdapterScreen = false;
-    public static Vector2 NeedAdapterMoveDownOffset = new Vector2(0, 82);
+    [NonSerialized]
+    public static Vector2 NeedAdapterMoveDownOffset = new Vector2(0, 75);
     private string deviceID = string.Empty;
     LocalData m_LocalData;
     private void Awake()
@@ -242,6 +243,11 @@ public class GB_Manager : MonoBehaviour
         }
 #endif
         return apks;
+    }
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+            AllAPKnames = GetAllApk();
     }
     struct ReceiveRegistryData
     {

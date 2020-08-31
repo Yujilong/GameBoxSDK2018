@@ -15,6 +15,8 @@ public class GB_UIManager : MonoBehaviour
         {(int)GB_PopPanelType.Help,"GB_UIPanel/GB_UI_HelpPanel" },
         {(int)GB_PopPanelType.Privacy,"GB_UIPanel/GB_UI_PrivacyPanel" },
         {(int)GB_PopPanelType.FirstReward,"GB_UIPanel/GB_UI_FirstRewardPanel" },
+        {(int)GB_PopPanelType.ContinuePlaying,"GB_UIPanel/GB_UI_ContinuePanel" },
+        {(int)GB_PopPanelType.ShopNotice,"GB_UIPanel/GB_UI_ShopNoticePanel" },
     };
     readonly Dictionary<int, GB_UIBase> LoadedPanel_Dic = new Dictionary<int, GB_UIBase>();
 
@@ -24,6 +26,10 @@ public class GB_UIManager : MonoBehaviour
     };
     readonly Dictionary<int, SpriteAtlas> LoadedSpriteAtlas_Dic = new Dictionary<int, SpriteAtlas>();
     const string MenuPanelPath = "GB_UIPanel/GB_UI_MenuPanel";
+    [NonSerialized]
+    public static string ContinuePanelNeedShowTitle = string.Empty;
+    [NonSerialized]
+    public static Action ContinuePanelOkEvent = null;
     GB_UIBase Current_GamePanel = null;
     public GB_UI_MenuPanel MenuPanel = null;
     Transform PopPanelRoot;
@@ -61,8 +67,6 @@ public class GB_UIManager : MonoBehaviour
         if (Cor_PopPanelTask is null)
             Cor_PopPanelTask = StartCoroutine(ExcuteTask());
     }
-
-
     IEnumerator ExcuteTask()
     {
         while (Queue_PopPanel.Count > 0)
@@ -333,6 +337,12 @@ public class GB_UIManager : MonoBehaviour
         }
         return false;
     }
+    public void Show_ContinuePanel(string appName, Action okEvent)
+    {
+        ContinuePanelNeedShowTitle = "Continue playing\n" + appName;
+        ContinuePanelOkEvent = okEvent;
+        ShowPopPanelAsync(GB_PopPanelType.ContinuePlaying);
+    }
     struct PanelTask
     {
         public GB_PopPanelType t_panelType;
@@ -344,6 +354,8 @@ public enum GB_PopPanelType
     Help = 2,
     Privacy = 3,
     FirstReward = 4,
+    ContinuePlaying = 5,
+    ShopNotice = 6,
 }
 public enum GB_FullScreenPanelType
 {

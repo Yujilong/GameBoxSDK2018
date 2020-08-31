@@ -15,6 +15,7 @@ public class GB_UI_NewGameItem : MonoBehaviour
     public RectTransform rect_loading1;
     public RectTransform rect_loading2;
     string app_pkg_name;
+    string app_name;
     public void Init(Texture2D defaulticon, string ad1_name, string ad2_name, string app_name, string des1,string des2,string des3,string app_pkg_name)
     {
         text_appname.text = app_name;
@@ -28,6 +29,7 @@ public class GB_UI_NewGameItem : MonoBehaviour
         rect_loading1.gameObject.SetActive(false);
         rect_loading2.gameObject.SetActive(false);
         this.app_pkg_name = app_pkg_name;
+        this.app_name = app_name;
         btn_play.onClick.RemoveAllListeners();
         if (!string.IsNullOrEmpty(app_pkg_name))
             btn_play.onClick.AddListener(OnPlayButtonClick);
@@ -60,29 +62,32 @@ public class GB_UI_NewGameItem : MonoBehaviour
     }
     void OnPlayButtonClick()
     {
-        if (GB_Manager.AllAPKnames.Contains(app_pkg_name))
-        {
-            using (AndroidJavaClass jcPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
-            {
-                using (AndroidJavaObject joActivity = jcPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
-                {
-                    using (AndroidJavaObject joPackageManager = joActivity.Call<AndroidJavaObject>("getPackageManager"))
-                    {
-                        using (AndroidJavaObject joIntent = joPackageManager.Call<AndroidJavaObject>("getLaunchIntentForPackage", app_pkg_name))
-                        {
-                            if (null != joIntent)
-                            {
-                                joActivity.Call("startActivity", joIntent);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        else
-        {
-            Application.OpenURL("https://play.google.com/store/apps/details?id=" + app_pkg_name);
-        }
+        GB_UIManager.Instance.Show_ContinuePanel(app_name, () =>
+         {
+             if (GB_Manager.AllAPKnames.Contains(app_pkg_name))
+             {
+                 using (AndroidJavaClass jcPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+                 {
+                     using (AndroidJavaObject joActivity = jcPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+                     {
+                         using (AndroidJavaObject joPackageManager = joActivity.Call<AndroidJavaObject>("getPackageManager"))
+                         {
+                             using (AndroidJavaObject joIntent = joPackageManager.Call<AndroidJavaObject>("getLaunchIntentForPackage", app_pkg_name))
+                             {
+                                 if (null != joIntent)
+                                 {
+                                     joActivity.Call("startActivity", joIntent);
+                                 }
+                             }
+                         }
+                     }
+                 }
+             }
+             else
+             {
+                 Application.OpenURL("https://play.google.com/store/apps/details?id=" + app_pkg_name);
+             }
+         });
     }
     static Vector3 rotateSpeed = new Vector3(0, 0, 100);
     IEnumerator Loading1()

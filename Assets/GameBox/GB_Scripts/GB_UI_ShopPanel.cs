@@ -73,7 +73,7 @@ public class GB_UI_ShopPanel : GB_UIBase
     }
     void OnWithdrawButtonClick()
     {
-
+        GB_UIManager.Instance.ShowPopPanelAsync(GB_PopPanelType.ShopNotice);
     }
     public override IEnumerator OnEnter()
     {
