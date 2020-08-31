@@ -17,6 +17,9 @@ public class GB_Manager : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+#if !UNITY_EDITOR
+        Debug.unityLogger.logEnabled = false;
+#endif
         DontDestroyOnLoad(gameObject);
         NeedAdapterScreen = (float)Screen.width / Screen.height < 9 / 16f;
         deviceID = SystemInfo.deviceUniqueIdentifier;
@@ -71,7 +74,6 @@ public class GB_Manager : MonoBehaviour
             yield return www.SendWebRequest();
         }
         // Show results as text
-        Debug.Log(www.downloadHandler.text);
         ReceiveRegistryData tempData = JsonMapper.ToObject<ReceiveRegistryData>(www.downloadHandler.text);
         m_LocalData.coin = tempData.data.coin;
         SaveData();
@@ -90,23 +92,40 @@ public class GB_Manager : MonoBehaviour
             yield return www.SendWebRequest();
         }
         // Show results as text
-        Debug.Log(www.downloadHandler.text);
         ReceiveGamePageData tempData = JsonMapper.ToObject<ReceiveGamePageData>(www.downloadHandler.text);
         int count = tempData.data.Length;
         m_LocalData.data.Clear();
         for(int i = 0; i < count; i++)
             m_LocalData.data.Add(tempData.data[i]);
+        m_LocalData.lastGetPageDataDate = DateTime.Now;
         SaveData();
+        if (COR_allSetTexture.Count > 0)
+        {
+            foreach (Coroutine cor in COR_allSetTexture)
+            {
+                StopCoroutine(cor);
+            }
+            COR_allSetTexture.Clear();
+        }
+        string[] allFilePath = Directory.GetFiles(Application.temporaryCachePath, "*.*");
+        foreach (string path in allFilePath)
+        {
+            File.Delete(path);
+        }
+        GB_UI_GamePagePanel _GamePagePanel = GB_UIManager.Instance.Get_UIPanel(GB_FullScreenPanelType.GamePage) as GB_UI_GamePagePanel;
+        _GamePagePanel.RefreshPage();
     }
-    public void SetTexture(string name, Action<Texture2D> callback)
+    readonly List<Coroutine> COR_allSetTexture = new List<Coroutine>();
+    public void SetTexture(string name, Action<Texture2D,bool> callback)
     {
-        string localPath = Application.temporaryCachePath + "/" + name + ".jpg";
+        string localFilename = name.GetHashCode().ToString();
+        string localPath = Application.temporaryCachePath + "/" + localFilename;
         if (File.Exists(localPath))
-            StartCoroutine(WaitForLoadLocalTexture(localPath, callback));
+            COR_allSetTexture.Add(StartCoroutine(WaitForLoadLocalTexture(localPath, callback)));
         else
-            StartCoroutine(WaitForDownloadTexture(TexturePrefix + name, callback));
+            COR_allSetTexture.Add(StartCoroutine(WaitForDownloadTexture(TexturePrefix + name, callback)));
     }
-    IEnumerator WaitForDownloadTexture(string uri, Action<Texture2D> callback)
+    IEnumerator WaitForDownloadTexture(string uri, Action<Texture2D,bool> callback)
     {
         UnityWebRequest wr = new UnityWebRequest(uri);
         DownloadHandlerTexture texDl = new DownloadHandlerTexture(true);
@@ -136,23 +155,22 @@ public class GB_Manager : MonoBehaviour
             }
         }
         cubeT.Apply();
-        callback?.Invoke(cubeT);
+        callback?.Invoke(cubeT,true);
     }
-    IEnumerator WaitForLoadLocalTexture(string path, Action<Texture2D> callback)
+    IEnumerator WaitForLoadLocalTexture(string path, Action<Texture2D,bool> callback)
     {
         string filePath = "file:///" + path;
         WWW www = new WWW(filePath);
         yield return www;
         if (www.texture is object)
         {
-            callback.Invoke(www.texture);
+            callback.Invoke(www.texture,false);
         }
     }
     public static void SaveTexture(Texture2D texture, string fileName)
     {
-        fileName = fileName.Substring(0, fileName.Length - 4);
         byte[] data = texture.EncodeToJPG();
-        File.WriteAllBytes(Application.temporaryCachePath + "/" + fileName + ".jpg", data);
+        File.WriteAllBytes(Application.temporaryCachePath + "/" + fileName, data);
     }
     void SaveData()
     {

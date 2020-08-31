@@ -35,28 +35,30 @@ public class GB_UI_NewGameItem : MonoBehaviour
         {
             img_ad1.color = Color.gray;
             StartCoroutine("Loading1");
-            GB_Manager._instance.SetTexture(ad1_name, (t) =>
+            GB_Manager._instance.SetTexture(ad1_name, (t,isNew) =>
             {
                 img_ad1.texture = t;
                 StopCoroutine("Loading1");
                 rect_loading1.gameObject.SetActive(false);
                 img_ad1.color = Color.white;
-                string saveFileName = ad1_name.Replace("*", "");
-                GB_Manager.SaveTexture(t, saveFileName);
+                string saveFileName = ad1_name.GetHashCode().ToString();
+                if (isNew)
+                    GB_Manager.SaveTexture(t, saveFileName);
             });
         }
         if (!string.IsNullOrEmpty(ad2_name))
         {
             img_ad2.color = Color.gray;
             StartCoroutine("Loading2");
-            GB_Manager._instance.SetTexture(ad2_name, (t) =>
+            GB_Manager._instance.SetTexture(ad2_name, (t,isNew) =>
             {
                 img_ad2.texture = t;
                 StopCoroutine("Loading2");
                 rect_loading2.gameObject.SetActive(false);
                 img_ad2.color = Color.white;
-                string saveFileName = ad2_name.Replace("*", "");
-                GB_Manager.SaveTexture(t, saveFileName);
+                string saveFileName = ad2_name.GetHashCode().ToString();
+                if (isNew)
+                    GB_Manager.SaveTexture(t, saveFileName);
             });
         }
     }

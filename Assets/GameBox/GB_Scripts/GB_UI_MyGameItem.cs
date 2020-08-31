@@ -23,14 +23,15 @@ public class GB_UI_MyGameItem : MonoBehaviour
         {
             img_icon.color = Color.gray;
             StartCoroutine("Loading");
-            GB_Manager._instance.SetTexture(icon_name, (t) =>
+            GB_Manager._instance.SetTexture(icon_name, (t,isNew) =>
             {
                 StopCoroutine("Loading");
                 img_icon.color = Color.white;
                 rect_loading.gameObject.SetActive(false);
                 img_icon.texture = t;
-                string saveFileName = icon_name.Replace("*", "");
-                GB_Manager.SaveTexture(t, saveFileName);
+                string saveFileName = icon_name.GetHashCode().ToString();
+                if (isNew)
+                    GB_Manager.SaveTexture(t, saveFileName);
             });
         }
         btn_play.onClick.RemoveAllListeners();

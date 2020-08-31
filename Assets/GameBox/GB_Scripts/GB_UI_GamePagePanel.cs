@@ -10,6 +10,10 @@ public class GB_UI_GamePagePanel : GB_UIBase
     public GameObject go_singleNewGame;
     public RectTransform rect_notice;
     public RectTransform rect_games;
+
+    public GameObject go_loading;
+    public RectTransform rect_loading;
+    public Button btn_loadmore;
     public ScrollRect sr_content;
     public Text text_notice1;
     public Text text_notice2;
@@ -103,6 +107,8 @@ public class GB_UI_GamePagePanel : GB_UIBase
     protected override void Awake()
     {
         base.Awake();
+        btn_loadmore.onClick.AddListener(LoadNextPage);
+
         if (GB_Manager.NeedAdapterScreen)
         {
             rect_notice.anchoredPosition -= GB_Manager.NeedAdapterMoveDownOffset;
@@ -114,34 +120,7 @@ public class GB_UI_GamePagePanel : GB_UIBase
 
         list_allMyGames.Add(go_singleMyGame.GetComponent<GB_UI_MyGameItem>());
         list_allNewGames.Add(go_singleNewGame.GetComponent<GB_UI_NewGameItem>());
-        List<GB_Manager.GamePageData> allData = GB_Manager._instance.GetAllPageGameData();
-        int count = allData.Count;
-        int myGameIndex = 0;
-        int newGameIndex = 0;
-        Transform instantiateParent = go_singleMyGame.transform.parent;
-        for (int i = 0; i < count; i++)
-        {
-            GB_Manager.GamePageData tempData = allData[i];
-            if (tempData.played)
-            {
-                if (list_allMyGames.Count < myGameIndex + 1)
-                    list_allMyGames.Add(Instantiate(go_singleMyGame, instantiateParent).GetComponent<GB_UI_MyGameItem>());
-                list_allMyGames[myGameIndex].Init(tempData.game_logos, tempData.game_name, tempData.game_brief, tempData.game_pkg_url);
-                myGameIndex++;
-            }
-            else
-            {
-                if (list_allNewGames.Count < newGameIndex + 1)
-                    list_allNewGames.Add(Instantiate(go_singleNewGame, instantiateParent).GetComponent<GB_UI_NewGameItem>());
-                string[] adStrs = tempData.game_logob.Split(',');
-                list_allNewGames[newGameIndex].Init(adStrs[0], adStrs[1], tempData.game_name, tempData.game_brief, tempData.game_detail, "", tempData.game_pkg_url);
-                newGameIndex++;
-            }
-        }
-        if (myGameIndex == 0)
-            list_allMyGames[0].gameObject.SetActive(false);
-        if (newGameIndex == 0)
-            list_allNewGames[0].gameObject.SetActive(false);
+        RefreshPage();
         StartCoroutine(AutoMaqueenTips());
     }
     public override IEnumerator OnEnter()
@@ -216,5 +195,87 @@ public class GB_UI_GamePagePanel : GB_UIBase
             if (rect_notice2.localPosition.x <= -(rect_notice2.sizeDelta.x + Screen.width) / 2)
                 willResetNotice2 = true;
         }
+    }
+    const int loadCountPerPage = 8;
+    int dataStartIndex = 0;
+    int myGameIndex = 0;
+    int newGameIndex = 0;
+    public void RefreshPage()
+    {
+        List<GB_Manager.GamePageData> allData = GB_Manager._instance.GetAllPageGameData();
+        int count = allData.Count;
+        btn_loadmore.gameObject.SetActive(count > loadCountPerPage);
+        if (count > loadCountPerPage) dataStartIndex += loadCountPerPage;
+        count = Mathf.Min(count, loadCountPerPage);
+        myGameIndex = 0;
+        newGameIndex = 0;
+        Transform instantiateParent = go_singleMyGame.transform.parent;
+        for (int i = 0; i < count; i++)
+        {
+            GB_Manager.GamePageData tempData = allData[i];
+            if (tempData.played)
+            {
+                if (list_allMyGames.Count < myGameIndex + 1)
+                    list_allMyGames.Add(Instantiate(go_singleMyGame, instantiateParent).GetComponent<GB_UI_MyGameItem>());
+                list_allMyGames[myGameIndex].gameObject.SetActive(true);
+                list_allMyGames[myGameIndex].Init(tempData.game_logos, tempData.game_name, tempData.game_brief, tempData.game_pkg_url);
+                myGameIndex++;
+            }
+            else
+            {
+                if (list_allNewGames.Count < newGameIndex + 1)
+                    list_allNewGames.Add(Instantiate(go_singleNewGame, instantiateParent).GetComponent<GB_UI_NewGameItem>());
+                string[] adStrs = tempData.game_logob.Split(',');
+                list_allNewGames[newGameIndex].gameObject.SetActive(true);
+                list_allNewGames[newGameIndex].Init(adStrs[0], adStrs[1], tempData.game_name, tempData.game_brief, tempData.game_detail, "", tempData.game_pkg_url);
+                newGameIndex++;
+            }
+        }
+        int myGameGoCount = list_allMyGames.Count;
+        for(int i = myGameIndex; i < myGameGoCount; i++)
+            list_allMyGames[i].gameObject.SetActive(false);
+        int newGameGoCount = list_allNewGames.Count;
+        for (int i = newGameIndex; i < newGameGoCount; i++)
+            list_allNewGames[i].gameObject.SetActive(false);
+        btn_loadmore.transform.SetAsLastSibling();
+    }
+    void LoadNextPage()
+    {
+        List<GB_Manager.GamePageData> allData = GB_Manager._instance.GetAllPageGameData();
+        int count = allData.Count;
+        btn_loadmore.gameObject.SetActive(count > loadCountPerPage + dataStartIndex);
+        int endIndex = Mathf.Min(count, loadCountPerPage + dataStartIndex);
+        int startIndex = dataStartIndex;
+        if (count > loadCountPerPage + dataStartIndex)
+            dataStartIndex += loadCountPerPage;
+        Transform instantiateParent = go_singleMyGame.transform.parent;
+        for (int i = startIndex; i < endIndex; i++)
+        {
+            GB_Manager.GamePageData tempData = allData[i];
+            if (tempData.played)
+            {
+                if (list_allMyGames.Count < myGameIndex + 1)
+                    list_allMyGames.Add(Instantiate(go_singleMyGame, instantiateParent).GetComponent<GB_UI_MyGameItem>());
+                list_allMyGames[myGameIndex].gameObject.SetActive(true);
+                list_allMyGames[myGameIndex].Init(tempData.game_logos, tempData.game_name, tempData.game_brief, tempData.game_pkg_url);
+                myGameIndex++;
+            }
+            else
+            {
+                if (list_allNewGames.Count < newGameIndex + 1)
+                    list_allNewGames.Add(Instantiate(go_singleNewGame, instantiateParent).GetComponent<GB_UI_NewGameItem>());
+                string[] adStrs = tempData.game_logob.Split(',');
+                list_allNewGames[newGameIndex].gameObject.SetActive(true);
+                list_allNewGames[newGameIndex].Init(adStrs[0], adStrs[1], tempData.game_name, tempData.game_brief, tempData.game_detail, "", tempData.game_pkg_url);
+                newGameIndex++;
+            }
+        }
+        int myGameGoCount = list_allMyGames.Count;
+        for (int i = myGameIndex; i < myGameGoCount; i++)
+            list_allMyGames[i].gameObject.SetActive(false);
+        int newGameGoCount = list_allNewGames.Count;
+        for (int i = newGameIndex; i < newGameGoCount; i++)
+            list_allNewGames[i].gameObject.SetActive(false);
+        btn_loadmore.transform.SetAsLastSibling();
     }
 }

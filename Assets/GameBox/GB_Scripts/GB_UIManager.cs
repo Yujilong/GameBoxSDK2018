@@ -313,6 +313,14 @@ public class GB_UIManager : MonoBehaviour
             return null;
         }
     }
+    public GB_UIBase Get_UIPanel(GB_FullScreenPanelType _FullScreenPanelType)
+    {
+        return Get_UIPanel((int)_FullScreenPanelType);
+    }
+    public GB_UIBase Get_UIPanel(GB_PopPanelType _PopPanelType)
+    {
+        return Get_UIPanel((int)_PopPanelType);
+    }
     public bool HasShow_PopPanel(GB_PopPanelType _PopPanelType)
     {
         int panelIndex = (int)_PopPanelType;
